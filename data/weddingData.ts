@@ -30,7 +30,7 @@ export const weddingData: WeddingData = {
   hashtag: '#AayushGotAnjali',
   coupleNames: 'Aayush & Anjali',
   dateString: 'January 17–18, 2027',
-  location: 'Dharamshala, Himachal Pradesh',
+  location: 'Palampur, Himachal Pradesh',
   targetDate: '2027-01-17T10:00:00',
   events: [
     {
@@ -39,7 +39,7 @@ export const weddingData: WeddingData = {
       date: 'January 17, 2027',
       time: '05:00 PM Onwards',
       venue: 'The Grand Pavilion',
-      address: 'Tea Garden Road, Dharamshala, Himachal Pradesh',
+      address: 'Budha Mal Castle, Palampur, Himachal Pradesh',
       dressCode: 'Indo-Western / Royal Velvet',
       mapUrl: 'https://maps.google.com',
     },
@@ -49,7 +49,7 @@ export const weddingData: WeddingData = {
       date: 'January 18, 2027',
       time: '10:00 AM Onwards',
       venue: 'Dhauladhar Heritage Resort',
-      address: 'Upper Dharamshala, Himachal Pradesh',
+      address: 'JusTa Hotel, Palampur, Himachal Pradesh',
       dressCode: 'Traditional Himachali / Regal Ethnic',
       mapUrl: 'https://maps.google.com',
     },

@@ -18,10 +18,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Aayush & Anjali — Wedding Invitation',
-  description: 'Join us as we celebrate our wedding on January 17-18, 2027 in Dharamshala, Himachal Pradesh.',
+  description: 'Join us as we celebrate our wedding on January 17-18, 2027 in Palampur, Himachal Pradesh.',
   openGraph: {
     title: 'Aayush & Anjali — Digital Invitation',
-    description: '17—18 January 2027 • Dharamshala, Himachal Pradesh',
+    description: '17—18 January 2027 • Palampur, Himachal Pradesh',
     type: 'website',
   },
 };
