@@ -22,7 +22,7 @@ export const Venue: React.FC<{ mapUrl: string }> = ({ mapUrl }) => {
           className="p-8 rounded-2xl bg-[#1A1817] border border-[#C5A059]/20 space-y-6"
         >
           <h3 className="font-serif text-2xl font-normal text-[#FDFBF7]">
-            Dharamshala, Himachal Pradesh
+            Palampur, Himachal Pradesh
           </h3>
           <p className="text-xs text-[#FDFBF7]/70 leading-relaxed max-w-md mx-auto">
             Nestled in the shadows of the majestic Dhauladhar ranges, offering breathtaking mountain views and serene cedar air.
