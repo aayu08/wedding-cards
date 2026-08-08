@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { weddingData } from '@/data/weddingData';
 import { UnboxingExperience } from '@/components/unboxing/UnboxingExperience';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
-import { DynamicBackground } from '@/components/background/Dynamicbackground';
+import { DynamicBackground } from '@/components/background/DynamicBackground';
 import { HeroSection } from '@/components/hero/HeroSection';
 import { OurStory } from '@/components/sections/OurStory';
 import { Celebrations } from '@/components/sections/Celebrations';
