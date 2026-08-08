@@ -3,10 +3,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+interface BackgroundProps {
+  img?: string;
+  gFrom?: string;
+  gVia?: string;
+  gTo?: string;
+}
+
 interface UnboxingProps {
   monogram: string;
   onUnsealed: () => void;
   children: React.ReactNode;
+  background?: BackgroundProps;
 }
 
 export const UnboxingExperience: React.FC<UnboxingProps> = ({ monogram, onUnsealed, children }) => {
@@ -28,7 +36,11 @@ export const UnboxingExperience: React.FC<UnboxingProps> = ({ monogram, onUnseal
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#121110] px-6 text-center"
+            className="bg-section fixed inset-0 z-50 flex flex-col items-center justify-center px-6 text-center"
+            data-bg-img={background?.img ?? undefined}
+            data-g-from={background?.gFrom ?? undefined}
+            data-g-via={background?.gVia ?? undefined}
+            data-g-to={background?.gTo ?? undefined}
           >
             {/* Elegant Background Glow */}
             <div className="absolute w-[300px] h-[300px] bg-[#3B1C23]/40 rounded-full blur-3xl pointer-events-none" />
@@ -50,7 +62,8 @@ export const UnboxingExperience: React.FC<UnboxingProps> = ({ monogram, onUnseal
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleOpen}
-                className="w-24 h-24 rounded-full bg-gradient-to-br from-[#3B1C23] via-[#522530] to-[#250E13] border-2 border-[#C5A059] flex items-center justify-center shadow-xl cursor-pointer group relative overflow-hidden"
+                className="w-24 h-24 rounded-full border-2 border-[#C5A059] flex items-center justify-center shadow-xl cursor-pointer group relative overflow-hidden dynamic-bg"
+                style={{ ['--g-from' as any]: '#3B1C23', ['--g-via' as any]: '#522530', ['--g-to' as any]: '#250E13', ['--paper-dot' as any]: '#C5A059', ['--paper-bg' as any]: '#1A1817' }}
               >
                 <div className="absolute inset-0 bg-[#C5A059]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span className="font-serif text-2xl font-bold tracking-widest text-[#C5A059]">

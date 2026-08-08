@@ -28,7 +28,14 @@ export const HeroSection: React.FC<{ config: WeddingData }> = ({ config }) => {
   }, [config.targetDate]);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-between py-20 px-6 bg-[#121110] text-[#FDFBF7] overflow-hidden text-center">
+    <section
+      id="hero"
+      className="bg-section relative min-h-screen flex flex-col items-center justify-between py-20 px-6 text-[#FDFBF7] overflow-hidden text-center"
+      data-bg-img={config.backgrounds?.hero?.img ?? undefined}
+      data-g-from={config.backgrounds?.hero?.gFrom ?? undefined}
+      data-g-via={config.backgrounds?.hero?.gVia ?? undefined}
+      data-g-to={config.backgrounds?.hero?.gTo ?? undefined}
+    >
       {/* Background Vector Graphic (Mountains Silhouette) */}
       <div className="absolute inset-0 pointer-events-none opacity-20 flex items-end">
         <svg viewBox="0 0 1440 320" className="w-full h-auto fill-[#C5A059]">

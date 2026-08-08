@@ -14,6 +14,13 @@ export interface GalleryItem {
   aspect: 'portrait' | 'landscape' | 'square';
 }
 
+export interface BackgroundConfig {
+  img?: string;
+  gFrom?: string;
+  gVia?: string;
+  gTo?: string;
+}
+
 export interface WeddingData {
   monogram: string;
   hashtag: string;
@@ -23,6 +30,8 @@ export interface WeddingData {
   targetDate: string;
   events: EventItem[];
   galleryPlaceholders: GalleryItem[];
+  /** optional per-section background configs keyed by section id */
+  backgrounds?: { [sectionId: string]: BackgroundConfig };
 }
 
 export const weddingData: WeddingData = {
@@ -60,4 +69,19 @@ export const weddingData: WeddingData = {
     { id: 'g3', aspect: 'square' },
     { id: 'g4', aspect: 'landscape' },
   ],
+  backgrounds: {
+    hero: {
+      img: '/backgrounds/hero.jpg',
+      gFrom: '#0f1111',
+      gVia: '#2a1f1f',
+      gTo: '#3B1C23',
+    },
+    unboxing: {
+      img: '/backgrounds/unboxing.jpg',
+      gFrom: '#1A1817',
+      gVia: '#3B1C23',
+      gTo: '#250E13',
+    },
+    // add other section backgrounds here keyed by section id
+  },
 };

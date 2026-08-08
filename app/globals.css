@@ -6,6 +6,22 @@
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
   }
+
+  /* dynamic background that composes a linear gradient (using CSS variables) with the paper texture */
+  .dynamic-bg {
+    --g-from: #3B1C23;
+    --g-via: #522530;
+    --g-to: #250E13;
+    --paper-dot: #C5A059;
+    --paper-bg: #121110;
+    /* If --bg-img is provided, it should be a url(...) string */
+    background-image:
+      linear-gradient(135deg, var(--g-from), var(--g-via), var(--g-to)),
+      radial-gradient(var(--paper-dot) 0.5px, transparent 0.5px),
+      radial-gradient(var(--paper-dot) 0.5px, var(--paper-bg) 0.5px);
+    background-size: cover, 20px 20px, 20px 20px;
+    background-position: center, 0 0, 10px 10px;
+  }
 }
 
 html {

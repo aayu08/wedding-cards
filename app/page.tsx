@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { weddingData } from '@/data/weddingData';
 import { UnboxingExperience } from '@/components/unboxing/UnboxingExperience';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
+import ScrollBackground from '@/components/providers/ScrollBackground';
 import { HeroSection } from '@/components/hero/HeroSection';
 import { OurStory } from '@/components/sections/OurStory';
 import { Celebrations } from '@/components/sections/Celebrations';
@@ -36,7 +37,10 @@ export default function WeddingInvitationPage() {
 
   return (
     <main className="relative min-h-screen w-full overflow-x-hidden">
-      <UnboxingExperience monogram={weddingData.monogram} onUnsealed={handleUnsealed}>
+      {/* Scroll-driven global background manager (reads .bg-section elements) */}
+      <ScrollBackground />
+
+      <UnboxingExperience monogram={weddingData.monogram} onUnsealed={handleUnsealed} background={weddingData.backgrounds?.unboxing}>
         {isUnsealed && (
           <SmoothScrollProvider>
             <div className="relative w-full">
